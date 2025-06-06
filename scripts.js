@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Feedback form handling
   const feedbackForm = document.getElementById('feedbackForm');
   if (feedbackForm) {
-    const botToken = '7857009719:AAHqmgFWb9GNcpLWYCV_CYVrolRdtjD1N-Y';
-    const chatId = '5300078658';
+    const botToken = process.env.BOT_TOKEN;
+    const chatId = process.env.CHAT_ID;
 
     feedbackForm.addEventListener('submit', async (e) => {
       e.preventDefault();
