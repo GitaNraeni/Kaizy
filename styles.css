@@ -521,7 +521,6 @@ footer {
     justify-content: space-between;
     padding: 0.6rem 0.8rem;
     align-items: center;
-    gap: 0.01rem; /* Jarak super kecil */
   }
 
   .nav-logo {
@@ -555,11 +554,11 @@ footer {
 
   .menu-toggle {
     display: flex;
-    margin-left: 0.01rem; /* Jarak super kecil */
+    margin-left: 0.05rem;
   }
 
   #welcome-message {
-    margin-right: 0.01rem; /* Jarak super kecil */
+    margin-right: 0.05rem;
     font-size: 0.85rem;
   }
 
@@ -654,7 +653,6 @@ footer {
 @media (max-width: 480px) {
   .navbar {
     padding: 0.5rem 0.6rem;
-    gap: 0; /* Hapus gap untuk jarak super dekat */
   }
 
   .nav-logo-img {
@@ -674,12 +672,12 @@ footer {
   #welcome-message {
     font-size: 0.8rem;
     margin-right: 0;
-    padding-right: 0;
+    padding-right: 0.05rem;
   }
 
   .menu-toggle {
     margin-left: 0;
-    padding-left: 0;
+    padding-left: 0.05rem;
   }
 
   .menu-toggle span {
