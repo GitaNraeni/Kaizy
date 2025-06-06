@@ -45,6 +45,8 @@ body {
   box-shadow: 0 0 10px rgba(88, 101, 242, 0.5);
   animation: slideInUp 0.5s ease-in;
   z-index: 1002;
+  max-width: 90%;
+  word-wrap: break-word;
 }
 
 /* Name Change Popup */
@@ -169,7 +171,7 @@ body {
   list-style: none;
   gap: 1.5rem;
   align-items: center;
-  margin: 0 auto; /* Geser ke tengah sedikit */
+  margin: 0 auto;
 }
 
 .nav-link {
@@ -197,6 +199,10 @@ body {
   color: #ccc;
   cursor: pointer;
   transition: color 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
 }
 
 #welcome-message:hover {
@@ -209,6 +215,7 @@ body {
   gap: 5px;
   cursor: pointer;
   z-index: 1001;
+  padding: 0.5rem;
 }
 
 .menu-toggle span {
@@ -504,12 +511,35 @@ footer {
   animation: fadeIn 1s ease-in;
 }
 
-/* Responsive Navigation */
+/* Enhanced Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .bot-logo {
+    width: 90px;
+  }
+  
+  .features,
+  .guide {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.8rem;
   }
 
   .nav-links {
@@ -521,6 +551,7 @@ footer {
     left: 0;
     background: #2a2a4e;
     padding: 1rem;
+    gap: 0.8rem;
     z-index: 1000;
   }
 
@@ -530,17 +561,42 @@ footer {
 
   .menu-toggle {
     display: flex;
-    margin-left: 0.2rem; /* Dekatkan lebih jauh ke welcome-message */
   }
 
   #welcome-message {
-    margin-right: 0.2rem; /* Dekatkan lebih jauh ke burger */
     font-size: 0.9rem;
+    max-width: 120px;
   }
 
+  header {
+    padding: 1.5rem;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .bot-logo {
+    width: 80px;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .showcase {
+    flex-direction: column;
+  }
+  
+  .features,
+  .guide {
+    grid-template-columns: 1fr 1fr;
+  }
+  
   #name-change-popup {
     padding: 1.5rem;
-    max-width: 300px;
+    max-width: 320px;
   }
 
   #name-change-popup h2 {
@@ -553,47 +609,112 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .navbar {
-    padding: 0.8rem;
+    padding: 0.6rem;
   }
-
+  
   #welcome-message {
     font-size: 0.8rem;
-    margin-right: 0.1rem; /* Dekatkan maksimal ke burger */
+    max-width: 100px;
   }
-
-  .menu-toggle {
-    margin-left: 0.1rem; /* Dekatkan maksimal ke welcome-message */
-  }
-
+  
   .nav-logo-img {
-    width: 30px;
+    width: 32px;
   }
-
+  
   header {
-    padding: 0.8rem 0.3rem;
+    padding: 1rem 0.5rem;
   }
-
+  
   header h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
-
+  
   .bot-logo {
-    width: 60px;
+    width: 70px;
   }
-
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    margin: 0.3rem;
+  }
+  
+  .features,
+  .guide,
+  .feedback {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .feature-card,
+  .guide-card,
+  .content-card {
+    padding: 1.2rem;
+  }
+  
+  .feedback form,
+  .login form {
+    padding: 1.2rem;
+  }
+  
   #name-change-popup {
-    padding: 1rem;
+    padding: 1.2rem;
     max-width: 280px;
   }
 
   #name-change-popup h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  #name-change-popup input {
+    margin-bottom: 1rem;
   }
 
   #name-change-popup button {
     padding: 0.4rem 1rem;
     font-size: 0.8rem;
+    margin: 0 0.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #welcome-message {
+    font-size: 0.7rem;
+    max-width: 80px;
+  }
+  
+  .menu-toggle span {
+    width: 20px;
+    height: 2px;
+  }
+  
+  header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .bot-logo {
+    width: 60px;
+  }
+  
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  #name-change-popup {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  #name-change-popup button {
+    display: block;
+    width: 100%;
+    margin: 0.3rem 0;
   }
 }
