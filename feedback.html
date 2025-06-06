@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaizy Bot || Feedback</title>
+  <link rel="icon" href="image/kaizy.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="image/kaizy.png" alt="Kaizy Logo" class="nav-logo-img" />
+      <span>Kaizy Bot</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+      <li><a href="tos.html" class="nav-link">Terms of Service</a></li>
+      <li><a href="feedback.html" class="nav-link active">Feedback</a></li>
+      <li><a href="https://discord.com/oauth2/authorize?client_id=1349536671359565884&permissions=8&integration_type=0&scope=bot+applications.commands" class="nav-link">Invite Bot</a></li>
+      <li><a href="https://discord.gg/k7cFEyxXMe" class="nav-link">Support Server</a></li>
+    </ul>
+    <p id="welcome-message"></p>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <header>
+    <img src="image/kaizy.png" alt="Bot Logo" class="bot-logo" />
+    <h1>Feedback</h1>
+  </header>
+
+  <div class="container">
+    <section class="feedback">
+      <h2 class="section-title">📬 Submit Your Feedback</h2>
+      <form id="feedbackForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name & Username Discord" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required />
+
+        <label for="issue">Choose an Issue or Service</label>
+        <select id="issue" name="issue" required>
+          <option value="" disabled selected>Select...</option>
+          <option value="Feedback">Feedback</option>
+          <option value="Bug/Error">Bug/Error</option>
+          <option value="Bots Offline">Bots Offline</option>
+          <option value="Want to ask something?">Want to ask something?</option>
+          <option value="Service | Please ask what problems occur with bots">Service</option>
+          <option value="The command on the bot doesn't work">The command on the bot doesn't work</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="feedback">Feedback</label>
+        <textarea id="feedback" name="feedback" placeholder="Type your feedback here..." required></textarea>
+
+        <span>Image or PDF, Size limit: 10MB (Optional)</span>
+        <input type="file" id="file" name="file" accept="image/*,application/pdf" />
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Kaizy Bot. All rights reserved. Developed By Raen Astacala</p>
+  </footer>
+
+  <div id="name-change-popup">
+    <h2>Ganti Nama</h2>
+    <input type="text" placeholder="Masukkan nama baru..." />
+    <button class="change-btn">Change Name</button>
+    <button class="reset-btn">Reset Name</button>
+  </div>
+  <div id="overlay"></div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
