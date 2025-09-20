@@ -10,7 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const welcomeMessage = document.getElementById('welcome-message');
   if (username && welcomeMessage) {
     welcomeMessage.textContent = `Hallo ${username}!`;
-    welcomeMessage.addEventListener('click', () => {
+  }
+
+  // Trigger popup lewat klik logo (bukan welcomeMessage lagi)
+  const navLogo = document.querySelector('.nav-logo');
+  if (navLogo) {
+    navLogo.addEventListener('click', () => {
       document.getElementById('overlay').style.display = 'block';
       document.getElementById('name-change-popup').style.display = 'block';
     });
